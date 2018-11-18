@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <ul>
+        {% for plant in plants %}
+           {% include 'order_html.html' with element=plant %}
+        {% empty %}
+            <li>Пустой список</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
